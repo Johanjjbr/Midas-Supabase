@@ -1,0 +1,32 @@
+export '../../../flutter_flow/lat_lng.dart';
+export 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
+
+export '../supabase.dart';
+export 'row.dart';
+export 'table.dart';
+
+export 'tables/mgrupos.dart';
+export 'tables/mlistacabe.dart';
+export 'tables/mresptrib.dart';
+export 'tables/mlistasprecios.dart';
+export 'tables/mctacte.dart';
+export 'tables/mexpercli.dart';
+export 'tables/mproveed.dart';
+export 'tables/mtipocobro.dart';
+export 'tables/mjerarquia.dart';
+export 'tables/mvendedor.dart';
+export 'tables/mnotapedcab.dart';
+export 'tables/mmarcas.dart';
+export 'tables/mmotivonocpra.dart';
+export 'tables/marticulos.dart';
+export 'tables/mclientes.dart';
+export 'tables/mcondvta.dart';
+export 'tables/malicuotas.dart';
+export 'tables/mcatecli.dart';
+export 'tables/mdeposito.dart';
+export 'tables/mprovincia.dart';
+export 'tables/mnotapedite.dart';
+export 'tables/mmonedas.dart';
+export 'tables/mzonas.dart';
+export 'tables/mmstock.dart';
+export 'tables/mvisitas.dart';

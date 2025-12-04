@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "326142267843",
+    "project_id": "midas-e4yz1e",
+    "storage_bucket": "midas-e4yz1e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326142267843:android:695a4fb7dab3b162d76d76",
+        "android_client_info": {
+          "package_name": "com.mycompany.midas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoHMtdVQzrfAf9i_DBj8kerOKIZKoBEIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
