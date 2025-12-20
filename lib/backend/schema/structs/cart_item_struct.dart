@@ -16,17 +16,26 @@ class CartItemStruct extends FFFirebaseStruct {
     double? precioUnitario,
     int? cantidad,
     double? subtotal,
+<<<<<<< HEAD
     DocumentReference? productoRef,
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
     FirestoreUtilData firestoreUtilData = const FirestoreUtilData(),
   })  : _id = id,
         _nombre = nombre,
         _precioUnitario = precioUnitario,
         _cantidad = cantidad,
         _subtotal = subtotal,
+<<<<<<< HEAD
         _productoRef = productoRef,
         super(firestoreUtilData);
 
   // "ID" field.
+=======
+        super(firestoreUtilData);
+
+  // "id" field.
+>>>>>>> 1ddf1af (ultimo realizado)
   String? _id;
   String get id => _id ?? '';
   set id(String? val) => _id = val;
@@ -68,6 +77,7 @@ class CartItemStruct extends FFFirebaseStruct {
 
   bool hasSubtotal() => _subtotal != null;
 
+<<<<<<< HEAD
   // "productoRef" field.
   DocumentReference? _productoRef;
   DocumentReference? get productoRef => _productoRef;
@@ -77,28 +87,46 @@ class CartItemStruct extends FFFirebaseStruct {
 
   static CartItemStruct fromMap(Map<String, dynamic> data) => CartItemStruct(
         id: data['ID'] as String?,
+=======
+  static CartItemStruct fromMap(Map<String, dynamic> data) => CartItemStruct(
+        id: data['id'] as String?,
+>>>>>>> 1ddf1af (ultimo realizado)
         nombre: data['nombre'] as String?,
         precioUnitario: castToType<double>(data['precioUnitario']),
         cantidad: castToType<int>(data['cantidad']),
         subtotal: castToType<double>(data['subtotal']),
+<<<<<<< HEAD
         productoRef: data['productoRef'] as DocumentReference?,
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       );
 
   static CartItemStruct? maybeFromMap(dynamic data) =>
       data is Map ? CartItemStruct.fromMap(data.cast<String, dynamic>()) : null;
 
   Map<String, dynamic> toMap() => {
+<<<<<<< HEAD
         'ID': _id,
+=======
+        'id': _id,
+>>>>>>> 1ddf1af (ultimo realizado)
         'nombre': _nombre,
         'precioUnitario': _precioUnitario,
         'cantidad': _cantidad,
         'subtotal': _subtotal,
+<<<<<<< HEAD
         'productoRef': _productoRef,
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       }.withoutNulls;
 
   @override
   Map<String, dynamic> toSerializableMap() => {
+<<<<<<< HEAD
         'ID': serializeParam(
+=======
+        'id': serializeParam(
+>>>>>>> 1ddf1af (ultimo realizado)
           _id,
           ParamType.String,
         ),
@@ -118,16 +146,23 @@ class CartItemStruct extends FFFirebaseStruct {
           _subtotal,
           ParamType.double,
         ),
+<<<<<<< HEAD
         'productoRef': serializeParam(
           _productoRef,
           ParamType.DocumentReference,
         ),
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       }.withoutNulls;
 
   static CartItemStruct fromSerializableMap(Map<String, dynamic> data) =>
       CartItemStruct(
         id: deserializeParam(
+<<<<<<< HEAD
           data['ID'],
+=======
+          data['id'],
+>>>>>>> 1ddf1af (ultimo realizado)
           ParamType.String,
           false,
         ),
@@ -151,12 +186,15 @@ class CartItemStruct extends FFFirebaseStruct {
           ParamType.double,
           false,
         ),
+<<<<<<< HEAD
         productoRef: deserializeParam(
           data['productoRef'],
           ParamType.DocumentReference,
           false,
           collectionNamePath: ['marticulos'],
         ),
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       );
 
   @override
@@ -169,13 +207,21 @@ class CartItemStruct extends FFFirebaseStruct {
         nombre == other.nombre &&
         precioUnitario == other.precioUnitario &&
         cantidad == other.cantidad &&
+<<<<<<< HEAD
         subtotal == other.subtotal &&
         productoRef == other.productoRef;
+=======
+        subtotal == other.subtotal;
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
   int get hashCode => const ListEquality()
+<<<<<<< HEAD
       .hash([id, nombre, precioUnitario, cantidad, subtotal, productoRef]);
+=======
+      .hash([id, nombre, precioUnitario, cantidad, subtotal]);
+>>>>>>> 1ddf1af (ultimo realizado)
 }
 
 CartItemStruct createCartItemStruct({
@@ -184,7 +230,10 @@ CartItemStruct createCartItemStruct({
   double? precioUnitario,
   int? cantidad,
   double? subtotal,
+<<<<<<< HEAD
   DocumentReference? productoRef,
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   Map<String, dynamic> fieldValues = const {},
   bool clearUnsetFields = true,
   bool create = false,
@@ -196,7 +245,10 @@ CartItemStruct createCartItemStruct({
       precioUnitario: precioUnitario,
       cantidad: cantidad,
       subtotal: subtotal,
+<<<<<<< HEAD
       productoRef: productoRef,
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       firestoreUtilData: FirestoreUtilData(
         clearUnsetFields: clearUnsetFields,
         create: create,

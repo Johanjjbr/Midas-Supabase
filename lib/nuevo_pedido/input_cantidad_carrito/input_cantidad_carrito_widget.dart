@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
+=======
+import '/backend/schema/structs/index.dart';
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -45,8 +50,11 @@ class _InputCantidadCarritoWidgetState
     _model.textController ??=
         TextEditingController(text: widget!.itemData?.cantidad?.toString());
     _model.textFieldFocusNode ??= FocusNode();
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -101,7 +109,11 @@ class _InputCantidadCarritoWidgetState
             ),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
+<<<<<<< HEAD
                 color: Color(0x00000000),
+=======
+                color: FlutterFlowTheme.of(context).secondary,
+>>>>>>> 1ddf1af (ultimo realizado)
                 width: 1.0,
               ),
               borderRadius: BorderRadius.circular(8.0),

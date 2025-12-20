@@ -33,8 +33,11 @@ class _MediosdepagoEFECTIVOWidgetState
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

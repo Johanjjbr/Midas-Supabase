@@ -7,6 +7,10 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
 import '/index.dart';
+<<<<<<< HEAD
+=======
+import 'package:easy_debounce/easy_debounce.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -44,6 +48,7 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
       initialIndex: 1,
     )..addListener(() => safeSetState(() {}));
 
+<<<<<<< HEAD
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();
 
@@ -52,12 +57,27 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
 
     _model.passwordTextController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
+=======
+    _model.emailRegistroTextController ??= TextEditingController();
+    _model.emailRegistroFocusNode ??= FocusNode();
+
+    _model.codigoRegistroTextController ??= TextEditingController();
+    _model.codigoRegistroFocusNode ??= FocusNode();
+
+    _model.passwordRegistroTextController ??= TextEditingController();
+    _model.passwordRegistroFocusNode ??= FocusNode();
+>>>>>>> 1ddf1af (ultimo realizado)
 
     _model.confirmPasswordTextController ??= TextEditingController();
     _model.confirmPasswordFocusNode ??= FocusNode();
 
+<<<<<<< HEAD
     _model.codigoTextController2 ??= TextEditingController();
     _model.codigoFocusNode2 ??= FocusNode();
+=======
+    _model.codigoTextController ??= TextEditingController();
+    _model.codigoFocusNode ??= FocusNode();
+>>>>>>> 1ddf1af (ultimo realizado)
 
     _model.passwordLoginTextController ??= TextEditingController();
     _model.passwordLoginFocusNode ??= FocusNode();
@@ -377,9 +397,15 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
+<<<<<<< HEAD
                                                           .emailAddressTextController,
                                                       focusNode: _model
                                                           .emailAddressFocusNode,
+=======
+                                                          .emailRegistroTextController,
+                                                      focusNode: _model
+                                                          .emailRegistroFocusNode,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       autofocus: true,
                                                       autofillHints: [
                                                         AutofillHints.email
@@ -519,7 +545,11 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                                   context)
                                                               .primary,
                                                       validator: _model
+<<<<<<< HEAD
                                                           .emailAddressTextControllerValidator
+=======
+                                                          .emailRegistroTextControllerValidator
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -532,9 +562,15 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
+<<<<<<< HEAD
                                                           .codigoTextController1,
                                                       focusNode: _model
                                                           .codigoFocusNode1,
+=======
+                                                          .codigoRegistroTextController,
+                                                      focusNode: _model
+                                                          .codigoRegistroFocusNode,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       autofocus: true,
                                                       autofillHints: [
                                                         AutofillHints.password
@@ -668,7 +704,11 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                                   context)
                                                               .primary,
                                                       validator: _model
+<<<<<<< HEAD
                                                           .codigoTextController1Validator
+=======
+                                                          .codigoRegistroTextControllerValidator
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -681,15 +721,25 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
+<<<<<<< HEAD
                                                           .passwordTextController,
                                                       focusNode: _model
                                                           .passwordFocusNode,
+=======
+                                                          .passwordRegistroTextController,
+                                                      focusNode: _model
+                                                          .passwordRegistroFocusNode,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       autofocus: true,
                                                       autofillHints: [
                                                         AutofillHints.password
                                                       ],
                                                       obscureText: !_model
+<<<<<<< HEAD
                                                           .passwordVisibility,
+=======
+                                                          .passwordRegistroVisibility,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       decoration:
                                                           InputDecoration(
                                                         labelText: 'Contraseña',
@@ -791,15 +841,25 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                           onTap: () =>
                                                               safeSetState(
                                                             () => _model
+<<<<<<< HEAD
                                                                     .passwordVisibility =
                                                                 !_model
                                                                     .passwordVisibility,
+=======
+                                                                    .passwordRegistroVisibility =
+                                                                !_model
+                                                                    .passwordRegistroVisibility,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           ),
                                                           focusNode: FocusNode(
                                                               skipTraversal:
                                                                   true),
                                                           child: Icon(
+<<<<<<< HEAD
                                                             _model.passwordVisibility
+=======
+                                                            _model.passwordRegistroVisibility
+>>>>>>> 1ddf1af (ultimo realizado)
                                                                 ? Icons
                                                                     .visibility_outlined
                                                                 : Icons
@@ -844,7 +904,11 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                                   context)
                                                               .primary,
                                                       validator: _model
+<<<<<<< HEAD
                                                           .passwordTextControllerValidator
+=======
+                                                          .passwordRegistroTextControllerValidator
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -1032,9 +1096,52 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: FFButtonWidget(
+<<<<<<< HEAD
                                                       onPressed: () {
                                                         print(
                                                             'Button pressed ...');
+=======
+                                                      onPressed: () async {
+                                                        GoRouter.of(context)
+                                                            .prepareAuthEvent();
+                                                        if (_model
+                                                                .passwordRegistroTextController
+                                                                .text !=
+                                                            _model
+                                                                .confirmPasswordTextController
+                                                                .text) {
+                                                          ScaffoldMessenger.of(
+                                                                  context)
+                                                              .showSnackBar(
+                                                            SnackBar(
+                                                              content: Text(
+                                                                'Passwords don\'t match!',
+                                                              ),
+                                                            ),
+                                                          );
+                                                          return;
+                                                        }
+
+                                                        final user =
+                                                            await authManager
+                                                                .createAccountWithEmail(
+                                                          context,
+                                                          _model
+                                                              .emailRegistroTextController
+                                                              .text,
+                                                          _model
+                                                              .passwordRegistroTextController
+                                                              .text,
+                                                        );
+                                                        if (user == null) {
+                                                          return;
+                                                        }
+
+                                                        context.goNamedAuth(
+                                                            Dashboard1Widget
+                                                                .routeName,
+                                                            context.mounted);
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       },
                                                       text: 'Ingresar',
                                                       options: FFButtonOptions(
@@ -1141,9 +1248,26 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
+<<<<<<< HEAD
                                                           .codigoTextController2,
                                                       focusNode: _model
                                                           .codigoFocusNode2,
+=======
+                                                          .codigoTextController,
+                                                      focusNode: _model
+                                                          .codigoFocusNode,
+                                                      onChanged: (_) =>
+                                                          EasyDebounce.debounce(
+                                                        '_model.codigoTextController',
+                                                        Duration(
+                                                            milliseconds: 2000),
+                                                        () async {
+                                                          _model.codigoformateado =
+                                                              '${_model.codigoTextController.text}@midas.app';
+                                                          safeSetState(() {});
+                                                        },
+                                                      ),
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       autofocus: true,
                                                       autofillHints: [
                                                         AutofillHints.email
@@ -1285,7 +1409,11 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                                   context)
                                                               .primary,
                                                       validator: _model
+<<<<<<< HEAD
                                                           .codigoTextController2Validator
+=======
+                                                          .codigoTextControllerValidator
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -1485,7 +1613,12 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                             await authManager
                                                                 .signInWithEmail(
                                                           context,
+<<<<<<< HEAD
                                                           '${_model.codigoTextController2.text}@midas.app',
+=======
+                                                          _model
+                                                              .codigoformateado!,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           _model
                                                               .passwordLoginTextController
                                                               .text,
@@ -1494,10 +1627,27 @@ class _Authentication1WidgetState extends State<Authentication1Widget>
                                                           return;
                                                         }
 
+<<<<<<< HEAD
                                                         context.goNamedAuth(
                                                             Dashboard1Widget
                                                                 .routeName,
                                                             context.mounted);
+=======
+                                                        context.pushNamedAuth(
+                                                          LoadPageifLoginWidget
+                                                              .routeName,
+                                                          context.mounted,
+                                                          queryParameters: {
+                                                            'code':
+                                                                serializeParam(
+                                                              int.tryParse(_model
+                                                                  .codigoTextController
+                                                                  .text),
+                                                              ParamType.int,
+                                                            ),
+                                                          }.withoutNulls,
+                                                        );
+>>>>>>> 1ddf1af (ultimo realizado)
                                                       },
                                                       text: 'Ingresar',
                                                       options: FFButtonOptions(

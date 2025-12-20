@@ -8,6 +8,10 @@
     "pubspec.yaml": true,
     "lib/flutter_flow/function_changes.json": true,
     ".vscode/settings.json": true
+<<<<<<< HEAD
   },
   "dart.flutterSdkPath": "c:\\Users\\24h2\\Downloads\\FlutterFlow\\ff_flutter_sdk\\flutter"
+=======
+  }
+>>>>>>> 1ddf1af (ultimo realizado)
 }

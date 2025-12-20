@@ -49,10 +49,19 @@ class _EditProfileComponentWidgetState
     _model.yourNameTextController ??= TextEditingController();
     _model.yourNameFocusNode ??= FocusNode();
 
+<<<<<<< HEAD
     _model.myBioTextController ??= TextEditingController(text: 'Vendedor');
     _model.myBioFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+    _model.myBioTextController ??= TextEditingController();
+    _model.myBioFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {
+          _model.myBioTextController?.text = 'Vendedor';
+        }));
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

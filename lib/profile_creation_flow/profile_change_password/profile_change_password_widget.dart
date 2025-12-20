@@ -33,8 +33,11 @@ class _ProfileChangePasswordWidgetState
 
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

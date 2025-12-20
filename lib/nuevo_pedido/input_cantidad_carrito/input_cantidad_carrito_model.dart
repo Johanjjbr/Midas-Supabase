@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
+=======
+import '/backend/schema/structs/index.dart';
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -13,7 +18,11 @@ class InputCantidadCarritoModel
     extends FlutterFlowModel<InputCantidadCarritoWidget> {
   ///  Local state fields for this component.
 
+<<<<<<< HEAD
   MarticulosRecord? refarti;
+=======
+  GetArticulosConFiltroRow? refarti;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   ///  State fields for stateful widgets in this component.
 

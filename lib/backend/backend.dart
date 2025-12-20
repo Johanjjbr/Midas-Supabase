@@ -15,7 +15,10 @@ import 'schema/mlistasprecios_record.dart';
 import 'schema/mmarcas_record.dart';
 import 'schema/mmonedas_record.dart';
 import 'schema/mmotivonocpra_record.dart';
+<<<<<<< HEAD
 import 'schema/mmstock_record.dart';
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'schema/mprovincia_record.dart';
 import 'schema/mresptrib_record.dart';
 import 'schema/msql_temp1_record.dart';
@@ -25,8 +28,11 @@ import 'schema/msql_temp99_record.dart';
 import 'schema/mtipocobro_record.dart';
 import 'schema/mvendedor_record.dart';
 import 'schema/mzonas_record.dart';
+<<<<<<< HEAD
 import 'schema/mnotapedcab_record.dart';
 import 'schema/marticulos_record.dart';
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'schema/mclientes_record.dart';
 import 'schema/mexpercli_record.dart';
 import 'schema/mnotapedite_record.dart';
@@ -50,7 +56,10 @@ export 'schema/mlistasprecios_record.dart';
 export 'schema/mmarcas_record.dart';
 export 'schema/mmonedas_record.dart';
 export 'schema/mmotivonocpra_record.dart';
+<<<<<<< HEAD
 export 'schema/mmstock_record.dart';
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'schema/mprovincia_record.dart';
 export 'schema/mresptrib_record.dart';
 export 'schema/msql_temp1_record.dart';
@@ -60,8 +69,11 @@ export 'schema/msql_temp99_record.dart';
 export 'schema/mtipocobro_record.dart';
 export 'schema/mvendedor_record.dart';
 export 'schema/mzonas_record.dart';
+<<<<<<< HEAD
 export 'schema/mnotapedcab_record.dart';
 export 'schema/marticulos_record.dart';
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'schema/mclientes_record.dart';
 export 'schema/mexpercli_record.dart';
 export 'schema/mnotapedite_record.dart';
@@ -510,6 +522,7 @@ Future<List<MmotivonocpraRecord>> queryMmotivonocpraRecordOnce({
       singleRecord: singleRecord,
     );
 
+<<<<<<< HEAD
 /// Functions to query MmstockRecords (as a Stream and as a Future).
 Future<int> queryMmstockRecordCount({
   Query Function(Query)? queryBuilder,
@@ -547,6 +560,8 @@ Future<List<MmstockRecord>> queryMmstockRecordOnce({
       singleRecord: singleRecord,
     );
 
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 /// Functions to query MprovinciaRecords (as a Stream and as a Future).
 Future<int> queryMprovinciaRecordCount({
   Query Function(Query)? queryBuilder,
@@ -880,6 +895,7 @@ Future<List<MzonasRecord>> queryMzonasRecordOnce({
       singleRecord: singleRecord,
     );
 
+<<<<<<< HEAD
 /// Functions to query MnotapedcabRecords (as a Stream and as a Future).
 Future<int> queryMnotapedcabRecordCount({
   Query Function(Query)? queryBuilder,
@@ -954,6 +970,8 @@ Future<List<MarticulosRecord>> queryMarticulosRecordOnce({
       singleRecord: singleRecord,
     );
 
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 /// Functions to query MclientesRecords (as a Stream and as a Future).
 Future<int> queryMclientesRecordCount({
   Query Function(Query)? queryBuilder,

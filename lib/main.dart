@@ -9,9 +9,17 @@ import 'auth/supabase_auth/supabase_user_provider.dart';
 import 'auth/supabase_auth/auth_util.dart';
 
 import '/backend/supabase/supabase.dart';
+<<<<<<< HEAD
 import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+import 'backend/firebase/firebase_config.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import 'flutter_flow/flutter_flow_util.dart';
+import 'flutter_flow/internationalization.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
@@ -26,6 +34,10 @@ void main() async {
 
   await SupaFlow.initialize();
 
+<<<<<<< HEAD
+=======
+  await SQLiteManager.initialize();
+>>>>>>> 1ddf1af (ultimo realizado)
   await FlutterFlowTheme.initialize();
 
   final appState = FFAppState(); // Initialize FFAppState
@@ -46,6 +58,7 @@ class MyApp extends StatefulWidget {
       context.findAncestorStateOfType<_MyAppState>()!;
 }
 
+<<<<<<< HEAD
 class MyAppScrollBehavior extends MaterialScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
@@ -55,6 +68,11 @@ class MyAppScrollBehavior extends MaterialScrollBehavior {
 }
 
 class _MyAppState extends State<MyApp> {
+=======
+class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+
+>>>>>>> 1ddf1af (ultimo realizado)
   ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
@@ -91,6 +109,13 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
+<<<<<<< HEAD
+=======
+  void setLocale(String language) {
+    safeSetState(() => _locale = createLocale(language));
+  }
+
+>>>>>>> 1ddf1af (ultimo realizado)
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
         FlutterFlowTheme.saveThemeMode(mode);
@@ -101,6 +126,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'MIDAS Supabase',
+<<<<<<< HEAD
       scrollBehavior: MyAppScrollBehavior(),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
@@ -108,6 +134,20 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [Locale('en', '')],
+=======
+      localizationsDelegates: [
+        FFLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        FallbackMaterialLocalizationDelegate(),
+        FallbackCupertinoLocalizationDelegate(),
+      ],
+      locale: _locale,
+      supportedLocales: const [
+        Locale('es'),
+      ],
+>>>>>>> 1ddf1af (ultimo realizado)
       theme: ThemeData(
         brightness: Brightness.light,
         useMaterial3: false,
@@ -155,9 +195,16 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'Dashboard1': Dashboard1Widget(),
       'Catalogo': CatalogoWidget(),
+<<<<<<< HEAD
       'Cliente': ClienteWidget(),
       'Actividad': ActividadWidget(),
       'Estadisticas': EstadisticasWidget(),
+=======
+      'Actividad': ActividadWidget(),
+      'Estadisticas': EstadisticasWidget(),
+      'ClienteCopy': ClienteCopyWidget(),
+      'DebugPedidos': DebugPedidosWidget(),
+>>>>>>> 1ddf1af (ultimo realizado)
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -195,6 +242,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
+<<<<<<< HEAD
               Icons.people_alt_outlined,
               size: 24.0,
             ),
@@ -203,6 +251,8 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
               Icons.history_rounded,
               size: 24.0,
             ),
@@ -216,6 +266,25 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             label: 'Estadisticas',
             tooltip: '',
+<<<<<<< HEAD
+=======
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people_alt_outlined,
+              size: 24.0,
+            ),
+            label: 'Clientes',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.bug_report_outlined,
+              size: 24.0,
+            ),
+            label: 'bug',
+            tooltip: '',
+>>>>>>> 1ddf1af (ultimo realizado)
           )
         ],
       ),

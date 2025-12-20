@@ -23,10 +23,17 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
+<<<<<<< HEAD
     "serve": "firebase -P midas-e4yz1e emulators:start --only functions",
     "shell": "firebase -P midas-e4yz1e functions:shell",
     "start": "npm run shell",
     "logs": "firebase -P midas-e4yz1e functions:log",
+=======
+    "serve": "firebase -P eats-r60qfx emulators:start --only functions",
+    "shell": "firebase -P eats-r60qfx functions:shell",
+    "start": "npm run shell",
+    "logs": "firebase -P eats-r60qfx functions:log",
+>>>>>>> 1ddf1af (ultimo realizado)
     "compile": "cp ../../tsconfig.template.json ./tsconfig-compile.json && tsc --project tsconfig-compile.json"
   },
   "engines": {

@@ -1,4 +1,8 @@
 import '/backend/backend.dart';
+<<<<<<< HEAD
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';

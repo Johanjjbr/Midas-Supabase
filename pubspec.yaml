@@ -111,7 +111,10 @@ dependencies:
   stream_transform: 2.1.0
   supabase: 2.7.0
   supabase_flutter: 2.9.0
+<<<<<<< HEAD
   text_search: 1.0.1
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   timeago: 3.7.1
   url_launcher: 6.3.1
   url_launcher_android: 6.3.16
@@ -180,6 +183,10 @@ flutter:
     - assets/pdfs/
     - assets/jsons/
 
+<<<<<<< HEAD
+=======
+    - assets/sqlite_db_files/
+>>>>>>> 1ddf1af (ultimo realizado)
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

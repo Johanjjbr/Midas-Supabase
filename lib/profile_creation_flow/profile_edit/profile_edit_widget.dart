@@ -28,8 +28,11 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfileEditModel());
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

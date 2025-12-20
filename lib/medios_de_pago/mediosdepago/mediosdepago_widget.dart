@@ -36,8 +36,11 @@ class _MediosdepagoWidgetState extends State<MediosdepagoWidget> {
 
     _model.textController2 ??= TextEditingController();
     _model.textFieldFocusNode2 ??= FocusNode();
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

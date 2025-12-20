@@ -41,10 +41,15 @@ class _PedidoConfirmadoComponenteWidgetState
         ),
       );
 
+<<<<<<< HEAD
       context.pushNamed(ClienteWidget.routeName);
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+      context.pushNamed(ClienteCopyWidget.routeName);
+    });
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

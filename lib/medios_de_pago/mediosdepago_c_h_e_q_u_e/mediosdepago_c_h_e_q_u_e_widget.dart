@@ -53,7 +53,10 @@ class _MediosdepagoCHEQUEWidgetState extends State<MediosdepagoCHEQUEWidget>
     _model.textFieldFocusNode4 ??= FocusNode();
 
     _model.textFieldMask4 = MaskTextInputFormatter(mask: '##/##/####');
+<<<<<<< HEAD
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

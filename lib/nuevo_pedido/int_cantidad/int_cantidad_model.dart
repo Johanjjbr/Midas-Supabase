@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import '/backend/backend.dart';
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -11,7 +15,11 @@ import 'package:provider/provider.dart';
 class IntCantidadModel extends FlutterFlowModel<IntCantidadWidget> {
   ///  Local state fields for this component.
 
+<<<<<<< HEAD
   MarticulosRecord? refarti;
+=======
+  GetArticulosConFiltroRow? refarti;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   ///  State fields for stateful widgets in this component.
 

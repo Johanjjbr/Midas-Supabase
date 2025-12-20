@@ -30,16 +30,32 @@ export 'package:intl/intl.dart';
 export 'package:cloud_firestore/cloud_firestore.dart'
     show DocumentReference, FirebaseFirestore;
 export 'package:page_transition/page_transition.dart';
+<<<<<<< HEAD
+=======
+export 'internationalization.dart' show FFLocalizations;
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'nav/nav.dart';
 
 T valueOrDefault<T>(T? value, T defaultValue) =>
     (value is String && value.isEmpty) || value == null ? defaultValue : value;
 
+<<<<<<< HEAD
+=======
+void _setTimeagoLocales() {
+  timeago.setLocaleMessages('es', timeago.EsMessages());
+  timeago.setLocaleMessages('es_short', timeago.EsShortMessages());
+}
+
+>>>>>>> 1ddf1af (ultimo realizado)
 String dateTimeFormat(String format, DateTime? dateTime, {String? locale}) {
   if (dateTime == null) {
     return '';
   }
   if (format == 'relative') {
+<<<<<<< HEAD
+=======
+    _setTimeagoLocales();
+>>>>>>> 1ddf1af (ultimo realizado)
     return timeago.format(dateTime, locale: locale, allowFromNow: true);
   }
   return DateFormat(format, locale).format(dateTime);
@@ -317,6 +333,12 @@ extension StringDocRef on String {
   DocumentReference get ref => FirebaseFirestore.instance.doc(this);
 }
 
+<<<<<<< HEAD
+=======
+void setAppLanguage(BuildContext context, String language) =>
+    MyApp.of(context).setLocale(language);
+
+>>>>>>> 1ddf1af (ultimo realizado)
 void setDarkModeSetting(BuildContext context, ThemeMode themeMode) =>
     MyApp.of(context).setThemeMode(themeMode);
 

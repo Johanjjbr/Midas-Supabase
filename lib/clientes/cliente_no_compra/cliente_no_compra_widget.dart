@@ -1,4 +1,8 @@
 import '/backend/backend.dart';
+<<<<<<< HEAD
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -22,7 +26,11 @@ class ClienteNoCompraWidget extends StatefulWidget {
     required this.refDocumentReferencia,
   });
 
+<<<<<<< HEAD
   final DocumentReference? refDocumentReferencia;
+=======
+  final GetClientesConFiltroyOrdenRow? refDocumentReferencia;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   static String routeName = 'Cliente_NoCompra';
   static String routePath = '/clienteNoCompra';
@@ -44,8 +52,11 @@ class _ClienteNoCompraWidgetState extends State<ClienteNoCompraWidget> {
 
     _model.observacionesTextController ??= TextEditingController();
     _model.observacionesFocusNode ??= FocusNode();
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -737,11 +748,14 @@ class _ClienteNoCompraWidgetState extends State<ClienteNoCompraWidget> {
                                       imagen1: _model.uploadedFileUrl_foto1,
                                     ));
                               }
+<<<<<<< HEAD
 
                               await widget!.refDocumentReferencia!
                                   .update(createMclientesRecordData(
                                 latlog: currentUserLocationValue,
                               ));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
                             }
                           },
                           text: 'Confirmar',

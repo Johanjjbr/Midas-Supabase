@@ -81,8 +81,11 @@ class _ClienteMapaComponetWidgetState extends State<ClienteMapaComponetWidget>
           !anim.applyInitialState),
       this,
     );
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

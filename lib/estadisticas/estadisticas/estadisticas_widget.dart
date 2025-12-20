@@ -29,8 +29,11 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => EstadisticasModel());
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

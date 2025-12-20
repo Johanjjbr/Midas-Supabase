@@ -6,15 +6,28 @@ export 'row.dart';
 export 'table.dart';
 
 export 'tables/mgrupos.dart';
+<<<<<<< HEAD
+=======
+export 'tables/mmstock_normalizado.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'tables/mlistacabe.dart';
 export 'tables/mresptrib.dart';
 export 'tables/mlistasprecios.dart';
 export 'tables/mctacte.dart';
 export 'tables/mexpercli.dart';
+<<<<<<< HEAD
+=======
+export 'tables/vista_mis_clientes.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'tables/mproveed.dart';
 export 'tables/mtipocobro.dart';
 export 'tables/mjerarquia.dart';
 export 'tables/mvendedor.dart';
+<<<<<<< HEAD
+=======
+export 'tables/vista_mis_precios.dart';
+export 'tables/vista_articulos_iva.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'tables/mnotapedcab.dart';
 export 'tables/mmarcas.dart';
 export 'tables/mmotivonocpra.dart';
@@ -22,6 +35,10 @@ export 'tables/marticulos.dart';
 export 'tables/mclientes.dart';
 export 'tables/mcondvta.dart';
 export 'tables/malicuotas.dart';
+<<<<<<< HEAD
+=======
+export 'tables/vista_ultima_visita.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'tables/mcatecli.dart';
 export 'tables/mdeposito.dart';
 export 'tables/mprovincia.dart';
@@ -29,4 +46,8 @@ export 'tables/mnotapedite.dart';
 export 'tables/mmonedas.dart';
 export 'tables/mzonas.dart';
 export 'tables/mmstock.dart';
+<<<<<<< HEAD
+=======
+export 'tables/vista_saldos_clientes.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 export 'tables/mvisitas.dart';

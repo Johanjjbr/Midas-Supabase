@@ -3,6 +3,10 @@ import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 import '/backend/schema/enums/enums.dart';
 import 'backend/supabase/supabase.dart';
+<<<<<<< HEAD
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
@@ -121,6 +125,21 @@ class FFAppState extends ChangeNotifier {
     prefs.setStringList(
         'ff_listaPedido', _listaPedido.map((x) => x.serialize()).toList());
   }
+<<<<<<< HEAD
+=======
+
+  int _PrefijoWeb = 0;
+  int get PrefijoWeb => _PrefijoWeb;
+  set PrefijoWeb(int value) {
+    _PrefijoWeb = value;
+  }
+
+  int _PedidoEncabezado = 0;
+  int get PedidoEncabezado => _PedidoEncabezado;
+  set PedidoEncabezado(int value) {
+    _PedidoEncabezado = value;
+  }
+>>>>>>> 1ddf1af (ultimo realizado)
 }
 
 void _safeInit(Function() initializeField) {

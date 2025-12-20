@@ -1,5 +1,9 @@
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
+<<<<<<< HEAD
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -13,7 +17,10 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+<<<<<<< HEAD
 import 'package:text_search/text_search.dart';
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 
 class PedidosNuevoAgregaItemsModel
     extends FlutterFlowModel<PedidosNuevoAgregaItemsWidget> {
@@ -34,13 +41,25 @@ class PedidosNuevoAgregaItemsModel
           int index, Function(CartItemStruct) updateFn) =>
       listaItemsEnProceso[index] = updateFn(listaItemsEnProceso[index]);
 
+<<<<<<< HEAD
+=======
+  String? searchTerm = ' ';
+
+  int? counter = 1;
+
+  int? notapediencabezado;
+
+>>>>>>> 1ddf1af (ultimo realizado)
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+<<<<<<< HEAD
   List<MarticulosRecord> simpleSearchResults = [];
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 
   @override
   void initState(BuildContext context) {}

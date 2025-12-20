@@ -85,6 +85,7 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+<<<<<<< HEAD
     match /mmstock/{document} {
       allow create: if true;
       allow read: if true;
@@ -92,6 +93,8 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
     match /mprovincia/{document} {
       allow create: if true;
       allow read: if true;
@@ -155,6 +158,7 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+<<<<<<< HEAD
     match /mnotapedcab/{document} {
       allow create: if true;
       allow read: if true;
@@ -169,6 +173,8 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
     match /mclientes/{document} {
       allow create: if true;
       allow read: if true;

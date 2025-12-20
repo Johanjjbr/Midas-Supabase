@@ -37,11 +37,17 @@ class _Dashboard1WidgetState extends State<Dashboard1Widget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (!(FFAppState().CODIGO != null)) {
+<<<<<<< HEAD
         context.pushNamed(Authentication1Widget.routeName);
       }
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+        context.pushNamed(LoginWidget.routeName);
+      }
+    });
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

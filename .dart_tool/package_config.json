@@ -201,9 +201,15 @@
     },
     {
       "name": "file_selector_macos",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4+4",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.9"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "file_selector_platform_interface",
@@ -243,9 +249,15 @@
     },
     {
       "name": "flutter",
+<<<<<<< HEAD
       "rootUri": "file:///c:/Users/24h2/Downloads/FlutterFlow/ff_flutter_sdk/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+=======
+      "rootUri": "file:///C:/Users/24h2/Documents/Proyecto%20Flutter/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "flutter_animate",
@@ -273,9 +285,15 @@
     },
     {
       "name": "flutter_localizations",
+<<<<<<< HEAD
       "rootUri": "file:///c:/Users/24h2/Downloads/FlutterFlow/ff_flutter_sdk/flutter/packages/flutter_localizations",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+=======
+      "rootUri": "file:///C:/Users/24h2/Documents/Proyecto%20Flutter/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "flutter_plugin_android_lifecycle",
@@ -291,6 +309,7 @@
     },
     {
       "name": "flutter_test",
+<<<<<<< HEAD
       "rootUri": "file:///c:/Users/24h2/Downloads/FlutterFlow/ff_flutter_sdk/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.7"
@@ -300,6 +319,17 @@
       "rootUri": "file:///c:/Users/24h2/Downloads/FlutterFlow/ff_flutter_sdk/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+=======
+      "rootUri": "file:///C:/Users/24h2/Documents/Proyecto%20Flutter/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///C:/Users/24h2/Documents/Proyecto%20Flutter/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "font_awesome_flutter",
@@ -525,19 +555,31 @@
     },
     {
       "name": "leak_tracker",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.9",
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-11.0.2",
+>>>>>>> 1ddf1af (ultimo realizado)
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_flutter_testing",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9",
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.10",
+>>>>>>> 1ddf1af (ultimo realizado)
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_testing",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.2",
+>>>>>>> 1ddf1af (ultimo realizado)
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -795,9 +837,15 @@
     },
     {
       "name": "sky_engine",
+<<<<<<< HEAD
       "rootUri": "file:///c:/Users/24h2/Downloads/FlutterFlow/ff_flutter_sdk/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+=======
+      "rootUri": "file:///C:/Users/24h2/Documents/Proyecto%20Flutter/flutter/bin/cache/pkg/sky_engine",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "source_span",
@@ -873,29 +921,39 @@
     },
     {
       "name": "test_api",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.4",
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.6",
+>>>>>>> 1ddf1af (ultimo realizado)
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
+<<<<<<< HEAD
       "name": "text_search",
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/text_search-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       "name": "timeago",
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/timeago-3.7.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
+<<<<<<< HEAD
       "name": "tuple",
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/tuple-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
       "name": "typed_data",
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.4.0",
       "packageUri": "lib/",
@@ -957,9 +1015,15 @@
     },
     {
       "name": "vector_math",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "video_player",
@@ -993,9 +1057,15 @@
     },
     {
       "name": "vm_service",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-15.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+=======
+      "rootUri": "file:///C:/Users/24h2/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-15.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+>>>>>>> 1ddf1af (ultimo realizado)
     },
     {
       "name": "web",
@@ -1077,8 +1147,14 @@
     }
   ],
   "generator": "pub",
+<<<<<<< HEAD
   "generatorVersion": "3.8.1",
   "flutterRoot": "file:///c:/Users/24h2/Downloads/FlutterFlow/ff_flutter_sdk/flutter",
   "flutterVersion": "3.32.4",
+=======
+  "generatorVersion": "3.9.2",
+  "flutterRoot": "file:///C:/Users/24h2/Documents/Proyecto%20Flutter/flutter",
+  "flutterVersion": "3.35.3",
+>>>>>>> 1ddf1af (ultimo realizado)
   "pubCache": "file:///C:/Users/24h2/AppData/Local/Pub/Cache"
 }

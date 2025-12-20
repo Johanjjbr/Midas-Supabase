@@ -32,13 +32,20 @@ class _PaginaDeCargaWidgetState extends State<PaginaDeCargaWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().CODIGO == 0) {
+<<<<<<< HEAD
         context.pushNamed(Authentication1Widget.routeName);
+=======
+        context.pushNamed(LoginWidget.routeName);
+>>>>>>> 1ddf1af (ultimo realizado)
       } else {
         context.pushNamed(Dashboard1Widget.routeName);
       }
     });
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

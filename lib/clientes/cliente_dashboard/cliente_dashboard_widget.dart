@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import '/backend/backend.dart';
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -25,7 +29,11 @@ class ClienteDashboardWidget extends StatefulWidget {
     required this.refCliente,
   });
 
+<<<<<<< HEAD
   final MclientesRecord? refCliente;
+=======
+  final GetClientesConFiltroyOrdenRow? refCliente;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   static String routeName = 'ClienteDashboard';
   static String routePath = '/clienteDashboard';
@@ -64,8 +72,11 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
         ],
       ),
     });
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -206,7 +217,11 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
                                         Text(
                                           valueOrDefault<String>(
                                             widget!.refCliente?.razonsoc,
+<<<<<<< HEAD
                                             '-',
+=======
+                                            'RAZONSOC',
+>>>>>>> 1ddf1af (ultimo realizado)
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -231,7 +246,11 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
                                         Text(
                                           valueOrDefault<String>(
                                             widget!.refCliente?.domicilio,
+<<<<<<< HEAD
                                             '--',
+=======
+                                            'DOMICILIO',
+>>>>>>> 1ddf1af (ultimo realizado)
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
@@ -262,7 +281,11 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
                                         Text(
                                           valueOrDefault<String>(
                                             widget!.refCliente?.localidad,
+<<<<<<< HEAD
                                             '--',
+=======
+                                            'LOCALIDAD',
+>>>>>>> 1ddf1af (ultimo realizado)
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
@@ -390,7 +413,11 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
                                     onTap: () async {
                                       await launchUrl(Uri(
                                         scheme: 'tel',
+<<<<<<< HEAD
                                         path: widget!.refCliente!.telefono,
+=======
+                                        path: widget!.refCliente!.telefono!,
+>>>>>>> 1ddf1af (ultimo realizado)
                                       ));
                                     },
                                     child: Column(
@@ -2804,7 +2831,11 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
               Align(
                 alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
+<<<<<<< HEAD
                   padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+=======
+                  padding: EdgeInsets.all(15.0),
+>>>>>>> 1ddf1af (ultimo realizado)
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -2884,8 +2915,13 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
                                 ClienteNoCompraWidget.routeName,
                                 queryParameters: {
                                   'refDocumentReferencia': serializeParam(
+<<<<<<< HEAD
                                     widget!.refCliente?.reference,
                                     ParamType.DocumentReference,
+=======
+                                    widget!.refCliente,
+                                    ParamType.SqliteRow,
+>>>>>>> 1ddf1af (ultimo realizado)
                                   ),
                                 }.withoutNulls,
                               );
@@ -2938,12 +2974,18 @@ class _ClienteDashboardWidgetState extends State<ClienteDashboardWidget>
                                 queryParameters: {
                                   'refCliente': serializeParam(
                                     widget!.refCliente,
+<<<<<<< HEAD
                                     ParamType.Document,
                                   ),
                                 }.withoutNulls,
                                 extra: <String, dynamic>{
                                   'refCliente': widget!.refCliente,
                                 },
+=======
+                                    ParamType.SqliteRow,
+                                  ),
+                                }.withoutNulls,
+>>>>>>> 1ddf1af (ultimo realizado)
                               );
                             },
                             child: Column(

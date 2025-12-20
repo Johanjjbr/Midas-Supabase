@@ -8,7 +8,11 @@ import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 import '/backend/schema/enums/enums.dart';
 import '/backend/supabase/supabase.dart';
+<<<<<<< HEAD
 
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/auth/base_auth_user_provider.dart';
 
 import '/main.dart';
@@ -86,14 +90,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
+<<<<<<< HEAD
           appStateNotifier.loggedIn ? NavBarPage() : Authentication1Widget(),
+=======
+          appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+>>>>>>> 1ddf1af (ultimo realizado)
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
+<<<<<<< HEAD
           builder: (context, _) => appStateNotifier.loggedIn
               ? NavBarPage()
               : Authentication1Widget(),
+=======
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+>>>>>>> 1ddf1af (ultimo realizado)
         ),
         FFRoute(
           name: ActividadWidget.routeName,
@@ -113,9 +126,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ProfileChangePasswordWidget(),
         ),
         FFRoute(
+<<<<<<< HEAD
           name: Authentication1Widget.routeName,
           path: Authentication1Widget.routePath,
           builder: (context, params) => Authentication1Widget(),
+=======
+          name: LoginWidget.routeName,
+          path: LoginWidget.routePath,
+          builder: (context, params) => LoginWidget(),
+>>>>>>> 1ddf1af (ultimo realizado)
         ),
         FFRoute(
           name: ProfileEditWidget.routeName,
@@ -135,10 +154,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               'code',
               ParamType.int,
             ),
+<<<<<<< HEAD
             clave: params.getParam(
               'clave',
               ParamType.String,
             ),
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
           ),
         ),
         FFRoute(
@@ -159,19 +181,30 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: Catalogo2Widget.routeName,
           path: Catalogo2Widget.routePath,
           builder: (context, params) => Catalogo2Widget(
+<<<<<<< HEAD
             grupdescReferencia: params.getParam(
               'grupdescReferencia',
               ParamType.String,
             ),
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
             grupoDEs: params.getParam(
               'grupoDEs',
               ParamType.String,
             ),
+<<<<<<< HEAD
+=======
+            grupoCode: params.getParam(
+              'grupoCode',
+              ParamType.String,
+            ),
+>>>>>>> 1ddf1af (ultimo realizado)
           ),
         ),
         FFRoute(
           name: Catalogo3Widget.routeName,
           path: Catalogo3Widget.routePath,
+<<<<<<< HEAD
           asyncParams: {
             'refDocument':
                 getDoc(['marticulos'], MarticulosRecord.fromSnapshot),
@@ -184,10 +217,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             refDocument: params.getParam(
               'refDocument',
               ParamType.Document,
+=======
+          builder: (context, params) => Catalogo3Widget(
+            refDocument: params.getParam<GetArticulosyStockRow>(
+              'refDocument',
+              ParamType.SqliteRow,
+>>>>>>> 1ddf1af (ultimo realizado)
             ),
           ),
         ),
         FFRoute(
+<<<<<<< HEAD
           name: ClienteWidget.routeName,
           path: ClienteWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -195,6 +235,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : ClienteWidget(),
         ),
         FFRoute(
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
           name: EstadisticasWidget.routeName,
           path: EstadisticasWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -204,6 +246,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: ClienteDashboardWidget.routeName,
           path: ClienteDashboardWidget.routePath,
+<<<<<<< HEAD
           asyncParams: {
             'refCliente': getDoc(['mclientes'], MclientesRecord.fromSnapshot),
           },
@@ -211,6 +254,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             refCliente: params.getParam(
               'refCliente',
               ParamType.Document,
+=======
+          builder: (context, params) => ClienteDashboardWidget(
+            refCliente: params.getParam<GetClientesConFiltroyOrdenRow>(
+              'refCliente',
+              ParamType.SqliteRow,
+>>>>>>> 1ddf1af (ultimo realizado)
             ),
           ),
         ),
@@ -233,11 +282,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: ClienteNoCompraWidget.routeName,
           path: ClienteNoCompraWidget.routePath,
           builder: (context, params) => ClienteNoCompraWidget(
+<<<<<<< HEAD
             refDocumentReferencia: params.getParam(
               'refDocumentReferencia',
               ParamType.DocumentReference,
               isList: false,
               collectionNamePath: ['mclientes'],
+=======
+            refDocumentReferencia:
+                params.getParam<GetClientesConFiltroyOrdenRow>(
+              'refDocumentReferencia',
+              ParamType.SqliteRow,
+>>>>>>> 1ddf1af (ultimo realizado)
             ),
           ),
         ),
@@ -247,6 +303,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ClienteFormularioWidget(),
         ),
         FFRoute(
+<<<<<<< HEAD
           name: ClientesPedidosWidget.routeName,
           path: ClientesPedidosWidget.routePath,
           builder: (context, params) => ClientesPedidosWidget(),
@@ -266,12 +323,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             refUsuario: params.getParam(
               'refUsuario',
               ParamType.Document,
+=======
+          name: ClientesPedidosConfirmadoWidget.routeName,
+          path: ClientesPedidosConfirmadoWidget.routePath,
+          builder: (context, params) => ClientesPedidosConfirmadoWidget(
+            refUsuario: params.getParam<GetClientesConFiltroyOrdenRow>(
+              'refUsuario',
+              ParamType.SqliteRow,
+            ),
+            observaciones: params.getParam(
+              'observaciones',
+              ParamType.String,
+>>>>>>> 1ddf1af (ultimo realizado)
             ),
           ),
         ),
         FFRoute(
           name: NuevoPedidoWidget.routeName,
           path: NuevoPedidoWidget.routePath,
+<<<<<<< HEAD
           asyncParams: {
             'refCliente': getDoc(['mclientes'], MclientesRecord.fromSnapshot),
           },
@@ -279,18 +349,73 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             refCliente: params.getParam(
               'refCliente',
               ParamType.Document,
+=======
+          builder: (context, params) => NuevoPedidoWidget(
+            refCliente: params.getParam<GetClientesConFiltroyOrdenRow>(
+              'refCliente',
+              ParamType.SqliteRow,
+>>>>>>> 1ddf1af (ultimo realizado)
             ),
           ),
         ),
         FFRoute(
           name: PedidosNuevoAgregaItemsWidget.routeName,
           path: PedidosNuevoAgregaItemsWidget.routePath,
+<<<<<<< HEAD
           builder: (context, params) => PedidosNuevoAgregaItemsWidget(),
+=======
+          builder: (context, params) => PedidosNuevoAgregaItemsWidget(
+            notapediencabezado: params.getParam(
+              'notapediencabezado',
+              ParamType.int,
+            ),
+            refCliente: params.getParam<GetClientesConFiltroyOrdenRow>(
+              'refCliente',
+              ParamType.SqliteRow,
+            ),
+            bonif: params.getParam(
+              'bonif',
+              ParamType.double,
+            ),
+          ),
+>>>>>>> 1ddf1af (ultimo realizado)
         ),
         FFRoute(
           name: PaginaDeCargaWidget.routeName,
           path: PaginaDeCargaWidget.routePath,
           builder: (context, params) => PaginaDeCargaWidget(),
+<<<<<<< HEAD
+=======
+        ),
+        FFRoute(
+          name: PruebadesincronizacionWidget.routeName,
+          path: PruebadesincronizacionWidget.routePath,
+          builder: (context, params) => PruebadesincronizacionWidget(),
+        ),
+        FFRoute(
+          name: ClienteCopyWidget.routeName,
+          path: ClienteCopyWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'ClienteCopy')
+              : ClienteCopyWidget(),
+        ),
+        FFRoute(
+          name: ClientesPedidosObservacionesWidget.routeName,
+          path: ClientesPedidosObservacionesWidget.routePath,
+          builder: (context, params) => ClientesPedidosObservacionesWidget(
+            referencia: params.getParam<GetClientesConFiltroyOrdenRow>(
+              'referencia',
+              ParamType.SqliteRow,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: DebugPedidosWidget.routeName,
+          path: DebugPedidosWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'DebugPedidos')
+              : DebugPedidosWidget(),
+>>>>>>> 1ddf1af (ultimo realizado)
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -463,7 +588,11 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
+<<<<<<< HEAD
             return '/authentication1';
+=======
+            return '/login';
+>>>>>>> 1ddf1af (ultimo realizado)
           }
           return null;
         },

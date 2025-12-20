@@ -3,17 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
+<<<<<<< HEAD
 	<string>AIzaSyAH8bJ1vA6bzKIk0w4_OCdyaIuufy2NjTI</string>
 	<key>GCM_SENDER_ID</key>
 	<string>326142267843</string>
+=======
+	<string>AIzaSyCWgyqzP9FP8xELAIufUzjkF75XmNWR-3s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>833616143447</string>
+>>>>>>> 1ddf1af (ultimo realizado)
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.mycompany.midas</string>
 	<key>PROJECT_ID</key>
+<<<<<<< HEAD
 	<string>midas-e4yz1e</string>
 	<key>STORAGE_BUCKET</key>
 	<string>midas-e4yz1e.firebasestorage.app</string>
+=======
+	<string>eats-r60qfx</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eats-r60qfx.firebasestorage.app</string>
+>>>>>>> 1ddf1af (ultimo realizado)
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +37,10 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
+<<<<<<< HEAD
 	<string>1:326142267843:ios:37c3b5b8736e6583d76d76</string>
+=======
+	<string>1:833616143447:ios:7f9b3870f8e656f5802f12</string>
+>>>>>>> 1ddf1af (ultimo realizado)
 </dict>
 </plist>

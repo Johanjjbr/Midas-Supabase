@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import '/backend/backend.dart';
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -13,12 +17,19 @@ export 'catalogo3_model.dart';
 class Catalogo3Widget extends StatefulWidget {
   const Catalogo3Widget({
     super.key,
+<<<<<<< HEAD
     String? ref,
     required this.refDocument,
   }) : this.ref = ref ?? '11';
 
   final String ref;
   final MarticulosRecord? refDocument;
+=======
+    required this.refDocument,
+  });
+
+  final GetArticulosyStockRow? refDocument;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   static String routeName = 'Catalogo3';
   static String routePath = '/catalogo3';
@@ -36,8 +47,11 @@ class _Catalogo3WidgetState extends State<Catalogo3Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Catalogo3Model());
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -187,7 +201,11 @@ class _Catalogo3WidgetState extends State<Catalogo3Widget> {
                     ),
                     Text(
                       valueOrDefault<String>(
+<<<<<<< HEAD
                         widget!.refDocument?.codarti,
+=======
+                        widget!.refDocument?.artdescrip,
+>>>>>>> 1ddf1af (ultimo realizado)
                         '-',
                       ),
                       style: FlutterFlowTheme.of(context).titleMedium.override(
@@ -210,7 +228,11 @@ class _Catalogo3WidgetState extends State<Catalogo3Widget> {
                     ),
                     Text(
                       valueOrDefault<String>(
+<<<<<<< HEAD
                         widget!.refDocument?.artdescrip,
+=======
+                        widget!.refDocument?.costo?.toString(),
+>>>>>>> 1ddf1af (ultimo realizado)
                         '-',
                       ),
                       style: FlutterFlowTheme.of(context).bodySmall.override(
@@ -233,7 +255,11 @@ class _Catalogo3WidgetState extends State<Catalogo3Widget> {
                     ),
                     Text(
                       valueOrDefault<String>(
+<<<<<<< HEAD
                         widget!.refDocument?.costo?.toString(),
+=======
+                        widget!.refDocument?.marca,
+>>>>>>> 1ddf1af (ultimo realizado)
                         '-',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -284,7 +310,11 @@ class _Catalogo3WidgetState extends State<Catalogo3Widget> {
                     ),
                     Text(
                       valueOrDefault<String>(
+<<<<<<< HEAD
                         widget!.refDocument?.unimed,
+=======
+                        widget!.refDocument?.stockActual?.toString(),
+>>>>>>> 1ddf1af (ultimo realizado)
                         '-',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(

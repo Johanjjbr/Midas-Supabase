@@ -29,8 +29,11 @@ class _ClienteFormularioWidgetState extends State<ClienteFormularioWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ClienteFormularioModel());
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override

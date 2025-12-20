@@ -1,16 +1,29 @@
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
+<<<<<<< HEAD
+=======
+import '/backend/sqlite/sqlite_manager.dart';
+import '/components/observaciones_componente_widget.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/nuevo_pedido/input_cantidad_carrito/input_cantidad_carrito_widget.dart';
+<<<<<<< HEAD
+=======
+import '/nuevo_pedido/pedido_borrador_encontrado/pedido_borrador_encontrado_widget.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+=======
+import 'package:flutter/scheduler.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'nuevo_pedido_model.dart';
@@ -22,7 +35,11 @@ class NuevoPedidoWidget extends StatefulWidget {
     this.refCliente,
   });
 
+<<<<<<< HEAD
   final MclientesRecord? refCliente;
+=======
+  final GetClientesConFiltroyOrdenRow? refCliente;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   static String routeName = 'Nuevo_Pedido';
   static String routePath = '/nuevoPedido';
@@ -41,7 +58,98 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
     super.initState();
     _model = createModel(context, () => NuevoPedidoModel());
 
+<<<<<<< HEAD
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (_model.notaencabezado != null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Nota encabezado si encontrada',
+              style: TextStyle(
+                color: FlutterFlowTheme.of(context).primaryText,
+              ),
+            ),
+            duration: Duration(milliseconds: 4000),
+            backgroundColor: FlutterFlowTheme.of(context).secondary,
+          ),
+        );
+      } else {
+        _model.notaencabezado = getCurrentTimestamp.secondsSinceEpoch;
+        safeSetState(() {});
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Nota encabezado no encontrada',
+              style: TextStyle(
+                color: FlutterFlowTheme.of(context).primaryText,
+              ),
+            ),
+            duration: Duration(milliseconds: 4000),
+            backgroundColor: FlutterFlowTheme.of(context).secondary,
+          ),
+        );
+        _model.checkClientes =
+            await SQLiteManager.instance.checkBorradorCliente(
+          codClie: widget!.refCliente?.codcli,
+        );
+        if (_model.checkClientes != null &&
+            (_model.checkClientes)!.isNotEmpty) {
+          await showModalBottomSheet(
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            enableDrag: false,
+            context: context,
+            builder: (context) {
+              return GestureDetector(
+                onTap: () {
+                  FocusScope.of(context).unfocus();
+                  FocusManager.instance.primaryFocus?.unfocus();
+                },
+                child: Padding(
+                  padding: MediaQuery.viewInsetsOf(context),
+                  child: PedidoBorradorEncontradoWidget(
+                    notapedienca: _model.checkClientes!.firstOrNull!.notapedid!,
+                    checBorrador: _model.checkClientes!.firstOrNull!,
+                  ),
+                ),
+              );
+            },
+          ).then(
+              (value) => safeSetState(() => _model.borradorEncontrado = value));
+
+          _model.notaencabezado = _model.borradorEncontrado;
+          safeSetState(() {});
+        } else {
+          _model.notaencabezado = getCurrentTimestamp.secondsSinceEpoch;
+          safeSetState(() {});
+          FFAppState().PedidoEncabezado = _model.notaencabezado!;
+          safeSetState(() {});
+          await SQLiteManager.instance.insertarEncabezadoPedido(
+            notaPedId: _model.notaencabezado?.toString(),
+            numPedido: _model.notaencabezado,
+            codClie: widget!.refCliente?.codcli,
+            fInicio: getCurrentTimestamp.secondsSinceEpoch.toString(),
+            hInicio: getCurrentTimestamp.millisecondsSinceEpoch.toString(),
+            codVend: FFAppState().CODIGO,
+            fFin: '0',
+            hFin: '0',
+            fEntrega: '0',
+            codCvta: '0',
+            total: 0.0,
+            neto: 0.0,
+            totalItems: 0,
+            bonificacion: 0.0,
+            observaciones: '0',
+            longitud: 0.0,
+            latitud: 0.0,
+          );
+        }
+      }
+    });
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -101,8 +209,12 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
+<<<<<<< HEAD
                                         context
                                             .pushNamed(ClienteWidget.routeName);
+=======
+                                        context.safePop();
+>>>>>>> 1ddf1af (ultimo realizado)
                                       },
                                       child: Icon(
                                         Icons.arrow_back,
@@ -159,7 +271,17 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         AutoSizeText(
+<<<<<<< HEAD
                                           '${widget!.refCliente?.codcli} - ${widget!.refCliente?.razonsoc}',
+=======
+                                          '${valueOrDefault<String>(
+                                            widget!.refCliente?.codcli,
+                                            'CODCLI',
+                                          )} - ${valueOrDefault<String>(
+                                            widget!.refCliente?.razonsoc,
+                                            'RAZONSOC',
+                                          )}',
+>>>>>>> 1ddf1af (ultimo realizado)
                                           minFontSize: 10.0,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -191,7 +313,11 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                         Text(
                                           valueOrDefault<String>(
                                             widget!.refCliente?.domicilio,
+<<<<<<< HEAD
                                             '-',
+=======
+                                            'DOMICILIO',
+>>>>>>> 1ddf1af (ultimo realizado)
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -220,7 +346,11 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                               ),
                                         ),
                                         Text(
+<<<<<<< HEAD
                                           'IVA?',
+=======
+                                          'IVA ?',
+>>>>>>> 1ddf1af (ultimo realizado)
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -322,8 +452,15 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                               ),
                                             ),
                                             FFButtonWidget(
+<<<<<<< HEAD
                                               onPressed: () {
                                                 print('Button pressed ...');
+=======
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                    DebugPedidosWidget
+                                                        .routeName);
+>>>>>>> 1ddf1af (ultimo realizado)
                                               },
                                               text: 'LP',
                                               options: FFButtonOptions(
@@ -450,7 +587,14 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                               onPressed: () {
                                                 print('Button pressed ...');
                                               },
+<<<<<<< HEAD
                                               text: 'LP',
+=======
+                                              text: valueOrDefault<String>(
+                                                FFAppState().CODIGO.toString(),
+                                                '001',
+                                              ),
+>>>>>>> 1ddf1af (ultimo realizado)
                                               options: FFButtonOptions(
                                                 width: 40.0,
                                                 height: 30.0,
@@ -512,8 +656,14 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
                                             FFButtonWidget(
+<<<<<<< HEAD
                                               onPressed: () {
                                                 print('Button pressed ...');
+=======
+                                              onPressed: () async {
+                                                FFAppState().listaPedido = [];
+                                                safeSetState(() {});
+>>>>>>> 1ddf1af (ultimo realizado)
                                               },
                                               text: 'RE',
                                               options: FFButtonOptions(
@@ -572,8 +722,15 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                               ),
                                             ),
                                             FFButtonWidget(
+<<<<<<< HEAD
                                               onPressed: () {
                                                 print('Button pressed ...');
+=======
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                    DebugPedidosWidget
+                                                        .routeName);
+>>>>>>> 1ddf1af (ultimo realizado)
                                               },
                                               text: 'LP',
                                               options: FFButtonOptions(
@@ -742,8 +899,29 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
+<<<<<<< HEAD
                                                   PedidosNuevoAgregaItemsWidget
                                                       .routeName);
+=======
+                                                PedidosNuevoAgregaItemsWidget
+                                                    .routeName,
+                                                queryParameters: {
+                                                  'notapediencabezado':
+                                                      serializeParam(
+                                                    _model.notaencabezado,
+                                                    ParamType.int,
+                                                  ),
+                                                  'refCliente': serializeParam(
+                                                    widget!.refCliente,
+                                                    ParamType.SqliteRow,
+                                                  ),
+                                                  'bonif': serializeParam(
+                                                    _model.bonificacion,
+                                                    ParamType.double,
+                                                  ),
+                                                }.withoutNulls,
+                                              );
+>>>>>>> 1ddf1af (ultimo realizado)
                                             },
                                             child: Container(
                                               height: MediaQuery.sizeOf(context)
@@ -830,8 +1008,30 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
                                                     context.pushNamed(
+<<<<<<< HEAD
                                                         PedidosNuevoAgregaItemsWidget
                                                             .routeName);
+=======
+                                                      PedidosNuevoAgregaItemsWidget
+                                                          .routeName,
+                                                      queryParameters: {
+                                                        'notapediencabezado':
+                                                            serializeParam(
+                                                          _model.notaencabezado,
+                                                          ParamType.int,
+                                                        ),
+                                                        'refCliente':
+                                                            serializeParam(
+                                                          widget!.refCliente,
+                                                          ParamType.SqliteRow,
+                                                        ),
+                                                        'bonif': serializeParam(
+                                                          _model.bonificacion,
+                                                          ParamType.double,
+                                                        ),
+                                                      }.withoutNulls,
+                                                    );
+>>>>>>> 1ddf1af (ultimo realizado)
                                                   },
                                                   text: 'Agregar Producto',
                                                   icon: Icon(
@@ -1163,6 +1363,71 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                                                           itemsEnCarritoItem);
                                                                   safeSetState(
                                                                       () {});
+<<<<<<< HEAD
+=======
+                                                                  await SQLiteManager
+                                                                      .instance
+                                                                      .limpiarItemsPedido(
+                                                                    notaPedId: _model
+                                                                        .notaencabezado
+                                                                        ?.toString(),
+                                                                  );
+                                                                  for (int loop1Index =
+                                                                          0;
+                                                                      loop1Index <
+                                                                          FFAppState()
+                                                                              .listaPedido
+                                                                              .length;
+                                                                      loop1Index++) {
+                                                                    final currentLoop1Item =
+                                                                        FFAppState()
+                                                                            .listaPedido[loop1Index];
+                                                                    await SQLiteManager
+                                                                        .instance
+                                                                        .notaPedId(
+                                                                      notaPedId: _model
+                                                                          .notaencabezado
+                                                                          ?.toString(),
+                                                                      renglon:
+                                                                          _model
+                                                                              .counter,
+                                                                      numPedido:
+                                                                          _model
+                                                                              .notaencabezado,
+                                                                      codClie: widget!
+                                                                          .refCliente
+                                                                          ?.codcli,
+                                                                      codArti:
+                                                                          currentLoop1Item
+                                                                              .id,
+                                                                      cantidad: currentLoop1Item
+                                                                          .cantidad
+                                                                          .toDouble(),
+                                                                      importeuni:
+                                                                          currentLoop1Item
+                                                                              .precioUnitario,
+                                                                      importeori:
+                                                                          currentLoop1Item
+                                                                              .subtotal,
+                                                                      bonifPorc:
+                                                                          00.0,
+                                                                      bonifMonto:
+                                                                          00.0,
+                                                                      iva: 2.0,
+                                                                      listaPrec: widget!
+                                                                          .refCliente
+                                                                          ?.listaprec,
+                                                                      fecha: getCurrentTimestamp
+                                                                          .toString(),
+                                                                      abm: '0',
+                                                                    );
+                                                                    _model.counter =
+                                                                        _model.counter! +
+                                                                            1;
+                                                                    safeSetState(
+                                                                        () {});
+                                                                  }
+>>>>>>> 1ddf1af (ultimo realizado)
                                                                 },
                                                                 child:
                                                                     Container(
@@ -1182,7 +1447,11 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .primaryBackground,
+<<<<<<< HEAD
                                                                     size: 15.0,
+=======
+                                                                    size: 18.0,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                                   ),
                                                                 ),
                                                               ),
@@ -1201,8 +1470,45 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                   ),
                                 ),
                                 FFButtonWidget(
+<<<<<<< HEAD
                                   onPressed: () {
                                     print('Button pressed ...');
+=======
+                                  onPressed: () async {
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return GestureDetector(
+                                          onTap: () {
+                                            FocusScope.of(context).unfocus();
+                                            FocusManager.instance.primaryFocus
+                                                ?.unfocus();
+                                          },
+                                          child: Padding(
+                                            padding: MediaQuery.viewInsetsOf(
+                                                context),
+                                            child:
+                                                ObservacionesComponenteWidget(
+                                              nombre:
+                                                  widget!.refCliente?.razonsoc,
+                                              codigo:
+                                                  widget!.refCliente?.codcli,
+                                              direccion:
+                                                  widget!.refCliente?.domicilio,
+                                              localidad:
+                                                  widget!.refCliente?.localidad,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(
+                                        () => _model.observacione = value));
+
+                                    safeSetState(() {});
+>>>>>>> 1ddf1af (ultimo realizado)
                                   },
                                   text: 'Agregar observaciones',
                                   icon: Icon(
@@ -1307,7 +1613,14 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                           ),
                                     ),
                                     TextSpan(
+<<<<<<< HEAD
                                       text: '[porc]',
+=======
+                                      text: valueOrDefault<String>(
+                                        _model.bonificacion?.toString(),
+                                        'bon',
+                                      ),
+>>>>>>> 1ddf1af (ultimo realizado)
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -1446,8 +1759,14 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                     color: FlutterFlowTheme.of(context).info,
                                     size: 26.0,
                                   ),
+<<<<<<< HEAD
                                   onPressed: () {
                                     print('IconButton pressed ...');
+=======
+                                  onPressed: () async {
+                                    FFAppState().listaPedido = [];
+                                    safeSetState(() {});
+>>>>>>> 1ddf1af (ultimo realizado)
                                   },
                                 ),
                                 FFButtonWidget(
@@ -1501,12 +1820,22 @@ class _NuevoPedidoWidgetState extends State<NuevoPedidoWidget> {
                                       queryParameters: {
                                         'refUsuario': serializeParam(
                                           widget!.refCliente,
+<<<<<<< HEAD
                                           ParamType.Document,
                                         ),
                                       }.withoutNulls,
                                       extra: <String, dynamic>{
                                         'refUsuario': widget!.refCliente,
                                       },
+=======
+                                          ParamType.SqliteRow,
+                                        ),
+                                        'observaciones': serializeParam(
+                                          _model.observacione,
+                                          ParamType.String,
+                                        ),
+                                      }.withoutNulls,
+>>>>>>> 1ddf1af (ultimo realizado)
                                     );
                                   },
                                   text: 'Guardar',

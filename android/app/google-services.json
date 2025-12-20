@@ -1,13 +1,23 @@
 {
   "project_info": {
+<<<<<<< HEAD
     "project_number": "326142267843",
     "project_id": "midas-e4yz1e",
     "storage_bucket": "midas-e4yz1e.firebasestorage.app"
+=======
+    "project_number": "833616143447",
+    "project_id": "eats-r60qfx",
+    "storage_bucket": "eats-r60qfx.firebasestorage.app"
+>>>>>>> 1ddf1af (ultimo realizado)
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:326142267843:android:695a4fb7dab3b162d76d76",
+=======
+        "mobilesdk_app_id": "1:833616143447:android:d5a48a524c19eb5c802f12",
+>>>>>>> 1ddf1af (ultimo realizado)
         "android_client_info": {
           "package_name": "com.mycompany.midas"
         }
@@ -15,7 +25,11 @@
       "oauth_client": [],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyBoHMtdVQzrfAf9i_DBj8kerOKIZKoBEIc"
+=======
+          "current_key": "AIzaSyCrUJcN1UXmTE8fZBNQKnaGIrsPUz0LK3I"
+>>>>>>> 1ddf1af (ultimo realizado)
         }
       ],
       "services": {

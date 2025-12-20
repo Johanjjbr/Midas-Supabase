@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
+=======
+import '/backend/schema/structs/index.dart';
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -8,7 +13,10 @@ import '/nuevo_pedido/pedido_confirmado_componente/pedido_confirmado_componente_
 import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
+<<<<<<< HEAD
 import 'package:cloud_firestore/cloud_firestore.dart';
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,9 +29,17 @@ class ClientesPedidosConfirmadoWidget extends StatefulWidget {
   const ClientesPedidosConfirmadoWidget({
     super.key,
     required this.refUsuario,
+<<<<<<< HEAD
   });
 
   final MclientesRecord? refUsuario;
+=======
+    this.observaciones,
+  });
+
+  final GetClientesConFiltroyOrdenRow? refUsuario;
+  final String? observaciones;
+>>>>>>> 1ddf1af (ultimo realizado)
 
   static String routeName = 'Clientes_Pedidos_Confirmado';
   static String routePath = '/clientesPedidosConfirmado';
@@ -38,7 +54,10 @@ class _ClientesPedidosConfirmadoWidgetState
   late ClientesPedidosConfirmadoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+<<<<<<< HEAD
   LatLng? currentUserLocationValue;
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
 
   @override
   void initState() {
@@ -50,8 +69,11 @@ class _ClientesPedidosConfirmadoWidgetState
       _model.pedidoID = functions.getOrderId();
       safeSetState(() {});
     });
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -140,7 +162,16 @@ class _ClientesPedidosConfirmadoWidgetState
                                   ),
                             ),
                             Text(
+<<<<<<< HEAD
                               dateTimeFormat("d/M h:mm a", getCurrentTimestamp),
+=======
+                              dateTimeFormat(
+                                "d/M h:mm a",
+                                getCurrentTimestamp,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+>>>>>>> 1ddf1af (ultimo realizado)
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -242,7 +273,11 @@ class _ClientesPedidosConfirmadoWidgetState
                             Text(
                               valueOrDefault<String>(
                                 widget!.refUsuario?.domicilio,
+<<<<<<< HEAD
                                 '-',
+=======
+                                'DOMICILIO',
+>>>>>>> 1ddf1af (ultimo realizado)
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -268,7 +303,11 @@ class _ClientesPedidosConfirmadoWidgetState
                             Text(
                               valueOrDefault<String>(
                                 widget!.refUsuario?.localidad,
+<<<<<<< HEAD
                                 '-',
+=======
+                                'LOCALIDAD',
+>>>>>>> 1ddf1af (ultimo realizado)
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -1073,7 +1112,14 @@ class _ClientesPedidosConfirmadoWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 20.0, 10.0),
                               child: Text(
+<<<<<<< HEAD
                                 '[observaciones]',
+=======
+                                valueOrDefault<String>(
+                                  widget!.observaciones,
+                                  'observaciones',
+                                ),
+>>>>>>> 1ddf1af (ultimo realizado)
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -1106,6 +1152,7 @@ class _ClientesPedidosConfirmadoWidgetState
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                     child: FFButtonWidget(
                       onPressed: () async {
+<<<<<<< HEAD
                         currentUserLocationValue = await getCurrentUserLocation(
                             defaultLocation: LatLng(0.0, 0.0));
 
@@ -1167,12 +1214,17 @@ class _ClientesPedidosConfirmadoWidgetState
                                 fecultact: getCurrentTimestamp,
                               ));
                         }
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
                         FFAppState().listaPedido = [];
                         safeSetState(() {});
                         await showModalBottomSheet(
                           isScrollControlled: true,
                           backgroundColor: Colors.transparent,
+<<<<<<< HEAD
                           enableDrag: false,
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
                           context: context,
                           builder: (context) {
                             return GestureDetector(
@@ -1187,8 +1239,11 @@ class _ClientesPedidosConfirmadoWidgetState
                             );
                           },
                         ).then((value) => safeSetState(() {}));
+<<<<<<< HEAD
 
                         safeSetState(() {});
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
                       },
                       text: 'Confirmar Pedido',
                       options: FFButtonOptions(

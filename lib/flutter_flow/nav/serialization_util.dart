@@ -7,7 +7,12 @@ import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 import '/backend/schema/enums/enums.dart';
 import '/backend/supabase/supabase.dart';
+<<<<<<< HEAD
 
+=======
+import '/backend/sqlite/queries/sqlite_row.dart';
+import '/backend/sqlite/queries/read.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
 import '../../flutter_flow/uploaded_file.dart';
@@ -102,6 +107,12 @@ String? serializeParam(
       case ParamType.SupabaseRow:
         return json.encode((param as SupabaseDataRow).data);
 
+<<<<<<< HEAD
+=======
+      case ParamType.SqliteRow:
+        return json.encode((param as SqliteRow).data);
+
+>>>>>>> 1ddf1af (ultimo realizado)
       default:
         data = null;
     }
@@ -195,6 +206,10 @@ enum ParamType {
   DataStruct,
   Enum,
   SupabaseRow,
+<<<<<<< HEAD
+=======
+  SqliteRow,
+>>>>>>> 1ddf1af (ultimo realizado)
 }
 
 dynamic deserializeParam<T>(
@@ -261,6 +276,11 @@ dynamic deserializeParam<T>(
         switch (T) {
           case MgruposRow:
             return MgruposRow(data);
+<<<<<<< HEAD
+=======
+          case MmstockNormalizadoRow:
+            return MmstockNormalizadoRow(data);
+>>>>>>> 1ddf1af (ultimo realizado)
           case MlistacabeRow:
             return MlistacabeRow(data);
           case MresptribRow:
@@ -271,6 +291,11 @@ dynamic deserializeParam<T>(
             return MctacteRow(data);
           case MexpercliRow:
             return MexpercliRow(data);
+<<<<<<< HEAD
+=======
+          case VistaMisClientesRow:
+            return VistaMisClientesRow(data);
+>>>>>>> 1ddf1af (ultimo realizado)
           case MproveedRow:
             return MproveedRow(data);
           case MtipocobroRow:
@@ -279,6 +304,13 @@ dynamic deserializeParam<T>(
             return MjerarquiaRow(data);
           case MvendedorRow:
             return MvendedorRow(data);
+<<<<<<< HEAD
+=======
+          case VistaMisPreciosRow:
+            return VistaMisPreciosRow(data);
+          case VistaArticulosIvaRow:
+            return VistaArticulosIvaRow(data);
+>>>>>>> 1ddf1af (ultimo realizado)
           case MnotapedcabRow:
             return MnotapedcabRow(data);
           case MmarcasRow:
@@ -293,6 +325,11 @@ dynamic deserializeParam<T>(
             return McondvtaRow(data);
           case MalicuotasRow:
             return MalicuotasRow(data);
+<<<<<<< HEAD
+=======
+          case VistaUltimaVisitaRow:
+            return VistaUltimaVisitaRow(data);
+>>>>>>> 1ddf1af (ultimo realizado)
           case McatecliRow:
             return McatecliRow(data);
           case MdepositoRow:
@@ -307,6 +344,11 @@ dynamic deserializeParam<T>(
             return MzonasRow(data);
           case MmstockRow:
             return MmstockRow(data);
+<<<<<<< HEAD
+=======
+          case VistaSaldosClientesRow:
+            return VistaSaldosClientesRow(data);
+>>>>>>> 1ddf1af (ultimo realizado)
           case MvisitasRow:
             return MvisitasRow(data);
           default:
@@ -320,6 +362,56 @@ dynamic deserializeParam<T>(
       case ParamType.Enum:
         return deserializeEnum<T>(param);
 
+<<<<<<< HEAD
+=======
+      case ParamType.SqliteRow:
+        final data = json.decode(param) as Map<String, dynamic>;
+        switch (T) {
+          case GetClientesRow:
+            return GetClientesRow(data);
+          case GetArticulosRow:
+            return GetArticulosRow(data);
+          case GetListadePreciosRow:
+            return GetListadePreciosRow(data);
+          case GetListadeEncabezadosRow:
+            return GetListadeEncabezadosRow(data);
+          case GetListadeStockRow:
+            return GetListadeStockRow(data);
+          case GetMarcasRow:
+            return GetMarcasRow(data);
+          case GetGruposRow:
+            return GetGruposRow(data);
+          case GetArticulosyStockRow:
+            return GetArticulosyStockRow(data);
+          case GetGruposconFiltrosRow:
+            return GetGruposconFiltrosRow(data);
+          case GetClientesConFiltroRow:
+            return GetClientesConFiltroRow(data);
+          case GetClientesConFiltroyOrdenRow:
+            return GetClientesConFiltroyOrdenRow(data);
+          case GetClientesVisitasSaldosConFiltroyOrdenRow:
+            return GetClientesVisitasSaldosConFiltroyOrdenRow(data);
+          case GetCuentasCorrientesRow:
+            return GetCuentasCorrientesRow(data);
+          case GetmvisitasRow:
+            return GetmvisitasRow(data);
+          case GetTimelineActivityRow:
+            return GetTimelineActivityRow(data);
+          case GetArticulosConFiltroRow:
+            return GetArticulosConFiltroRow(data);
+          case GetItemsBorradorRow:
+            return GetItemsBorradorRow(data);
+          case CheckBorradorClienteRow:
+            return CheckBorradorClienteRow(data);
+          case GetAllPedidosRow:
+            return GetAllPedidosRow(data);
+          case GetAllPedidositemRow:
+            return GetAllPedidositemRow(data);
+          default:
+            return null;
+        }
+
+>>>>>>> 1ddf1af (ultimo realizado)
       default:
         return null;
     }

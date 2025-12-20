@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+=======
+import '/backend/schema/enums/enums.dart';
+import '/backend/sqlite/sqlite_manager.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+=======
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+>>>>>>> 1ddf1af (ultimo realizado)
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'actividad_model.dart';
@@ -27,8 +36,11 @@ class _ActividadWidgetState extends State<ActividadWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ActividadModel());
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -298,7 +310,12 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
+<<<<<<< HEAD
                                           color: Color(0x4E57636C),
+=======
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+>>>>>>> 1ddf1af (ultimo realizado)
                                           letterSpacing: 0.0,
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
@@ -314,7 +331,12 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                     width: 15.0,
                                     height: 15.0,
                                     decoration: BoxDecoration(
+<<<<<<< HEAD
                                       color: Color(0x4E57636C),
+=======
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
+>>>>>>> 1ddf1af (ultimo realizado)
                                       shape: BoxShape.circle,
                                     ),
                                   ),
@@ -333,7 +355,12 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
+<<<<<<< HEAD
                                           color: Color(0x4E57636C),
+=======
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+>>>>>>> 1ddf1af (ultimo realizado)
                                           letterSpacing: 0.0,
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
@@ -345,6 +372,7 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                                   .fontStyle,
                                         ),
                                   ),
+<<<<<<< HEAD
                                 ].divide(SizedBox(width: 38.0)),
                               ),
                             ),
@@ -365,10 +393,55 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Row(
+=======
+                                ].divide(SizedBox(width: 50.0)),
+                              ),
+                            ),
+                            FutureBuilder<List<GetTimelineActivityRow>>(
+                              future:
+                                  SQLiteManager.instance.getTimelineActivity(),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                }
+                                final listViewGetTimelineActivityRowList =
+                                    snapshot.data!;
+
+                                return ListView.builder(
+                                  padding: EdgeInsets.zero,
+                                  shrinkWrap: true,
+                                  scrollDirection: Axis.vertical,
+                                  itemCount:
+                                      listViewGetTimelineActivityRowList.length,
+                                  itemBuilder: (context, listViewIndex) {
+                                    final listViewGetTimelineActivityRow =
+                                        listViewGetTimelineActivityRowList[
+                                            listViewIndex];
+                                    return Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          20.0, 0.0, 20.0, 0.0),
+                                      child: Container(
+                                        width: 100.0,
+                                        decoration: BoxDecoration(),
+                                        child: Row(
+>>>>>>> 1ddf1af (ultimo realizado)
                                           mainAxisSize: MainAxisSize.min,
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
+<<<<<<< HEAD
                                             Text(
                                               '[fecha]',
                                               style:
@@ -470,6 +543,41 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         font: GoogleFonts.inter(
+=======
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  width: 60.0,
+                                                  decoration: BoxDecoration(),
+                                                  child: Text(
+                                                    valueOrDefault<String>(
+                                                      listViewGetTimelineActivityRow
+                                                          .horaMostrar,
+                                                      '[Hora]',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                          letterSpacing: 0.0,
+>>>>>>> 1ddf1af (ultimo realizado)
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -481,6 +589,7 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
+<<<<<<< HEAD
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -579,6 +688,241 @@ class _ActividadWidgetState extends State<ActividadWidget> {
                                   ),
                                 ),
                               ],
+=======
+                                                  ),
+                                                ),
+                                                Container(
+                                                  height: 80.0,
+                                                  child: Stack(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Container(
+                                                          width: 3.0,
+                                                          height: 100.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .tertiary,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        width: 70.0,
+                                                        height: 70.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: () {
+                                                            if (listViewGetTimelineActivityRow
+                                                                    .tipo ==
+                                                                TIPOhistorial
+                                                                    .NO_COMPRA
+                                                                    .name) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .error;
+                                                            } else if (listViewGetTimelineActivityRow
+                                                                    .tipo ==
+                                                                TIPOhistorial
+                                                                    .VISITA
+                                                                    .name) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            } else {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .colorCustom;
+                                                            }
+                                                          }(),
+                                                          shape:
+                                                              BoxShape.circle,
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Container(
+                                                          width: 55.0,
+                                                          height: 55.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
+                                                            border: Border.all(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primaryBackground,
+                                                              width: 2.0,
+                                                            ),
+                                                          ),
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: FaIcon(
+                                                            FontAwesomeIcons
+                                                                .fileAlt,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primaryBackground,
+                                                            size: 24.0,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceEvenly,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      valueOrDefault<String>(
+                                                        listViewGetTimelineActivityRow
+                                                            .codigoCliente,
+                                                        '[CODE]',
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      valueOrDefault<String>(
+                                                        listViewGetTimelineActivityRow
+                                                            .nombreCliente,
+                                                        '[NOMBRE]',
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      valueOrDefault<String>(
+                                                        listViewGetTimelineActivityRow
+                                                            .detallePrincipal,
+                                                        '[DETALLE]',
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ].divide(SizedBox(width: 10.0)),
+                                            ),
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
+                                              child: Container(
+                                                width: 15.0,
+                                                height: 15.0,
+                                                decoration: BoxDecoration(
+                                                  color: listViewGetTimelineActivityRow
+                                                              .esSincronizado ==
+                                                          '1'
+                                                      ? Color(0xFF00AF54)
+                                                      : FlutterFlowTheme.of(
+                                                              context)
+                                                          .error,
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                alignment: AlignmentDirectional(
+                                                    1.0, 0.0),
+                                              ),
+                                            ),
+                                          ].divide(SizedBox(width: 10.0)),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+>>>>>>> 1ddf1af (ultimo realizado)
                             ),
                           ],
                         ),

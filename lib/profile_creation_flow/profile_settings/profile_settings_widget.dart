@@ -31,8 +31,11 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfileSettingsModel());
+<<<<<<< HEAD
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+=======
+>>>>>>> 1ddf1af (ultimo realizado)
   }
 
   @override
@@ -489,8 +492,12 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                     await authManager.signOut();
                     GoRouter.of(context).clearRedirectLocation();
 
+<<<<<<< HEAD
                     context.goNamedAuth(
                         Authentication1Widget.routeName, context.mounted);
+=======
+                    context.goNamedAuth(LoginWidget.routeName, context.mounted);
+>>>>>>> 1ddf1af (ultimo realizado)
                   },
                   text: 'Log Out',
                   options: FFButtonOptions(

@@ -178,10 +178,17 @@
 			};
 			buildConfigurationList = 97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */;
 			compatibilityVersion = "Xcode 9.3";
+<<<<<<< HEAD
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+=======
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				es,
+>>>>>>> 1ddf1af (ultimo realizado)
 				Base,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
